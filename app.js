@@ -15,7 +15,7 @@ server.route({
   path: '/css/{param*}',
   handler: {
     directory: {
-      path: 'static/css',
+      path: 'static/css'
     }
   }
 });
@@ -25,7 +25,7 @@ server.route({
   path: '/js/{param*}',
   handler: {
     directory: {
-      path: 'static/js',
+      path: 'static/js'
     }
   }
 });
@@ -35,7 +35,17 @@ server.route({
   path: '/fonts/{param*}',
   handler: {
     directory: {
-      path: 'static/fonts',
+      path: 'static/fonts'
+    }
+  }
+});
+
+server.route({
+  method: 'GET',
+  path: '/images/{param*}',
+  handler: {
+    directory: {
+      path: 'static/images'
     }
   }
 });
@@ -47,7 +57,6 @@ server.route({
     reply.view('index');
   }
 });
-
 
 server.start(function() {
   console.log('Server running at:', server.info.uri);
