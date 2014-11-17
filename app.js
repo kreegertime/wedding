@@ -59,5 +59,7 @@ server.route({
 });
 
 server.start(function() {
+  console.log('--------------------');
   console.log('Server running at:', server.info.uri);
+  console.log('--------------------');
 });
