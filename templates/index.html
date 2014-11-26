@@ -2,29 +2,65 @@
   <head>
     <title>Wedding Page</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/wedding.js"></script>
   </head>
   <body>
+
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="page-header">
-            <h1>Jamie &amp; Nick's <small>Wedding Page</small></h1>
-          </div>
+        <div class="col-xs-12 col-sm-5">
+          <img src="images/photo1.jpg" class="img-responsive" alt="" />
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="media">
-            <img class="pull-left" src="images/photo1.jpg" alt="" width="200" />
-            <!-- <span class="glyphicon glyphicon-glass pull-left"></span> -->
-            <div class="media-body">
-              <h4 class="media-heading">Coming Soon!</h4>
-            </div>
+        <div class="col-xs-12 col-sm-7">
+          <div class="page-header">
+            <h1>Jamie &amp; Nick's <small>Wedding Site</small></h1>
           </div>
         </div>
       </div>
     </div>
+
+    <br/>
+
+    <!-- TODO: serve this up dynamically... -->
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 content-title">
+          <h3>RSVP</h3>
+        </div>
+        <div class="col-xs-12 col-sm-7 hide-xs content-copy">
+          Some copy here. Some copy here. Some copy here. Some copy here.
+          Some copy here. Some copy here. Some copy here. Some copy here.
+          Some copy here. Some copy here. Some copy here. Some copy here.
+          Some copy here. Some copy here. Some copy here. Some copy here.
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TODO(kreeger): Left off right here need to figure out how the best way
+    to properly handle the layout stuff here -->
+    <!-- {{ content }} -->
+
+    <br/>
+    <br/>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul>
+            <li>RSVP</li>
+            <li>Time &amp; Date</li>
+            <li>Accommodations</li>
+            <li>Registry</li>
+            <li>Things to do in Minnesota</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

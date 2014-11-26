@@ -54,7 +54,35 @@ server.route({
   method: 'GET',
   path: '/',
   handler: function(request, reply) {
-    reply.view('index');
+    var content = [
+      {
+        title: 'RSVP',
+        copy: 'rsvp.html'
+      },
+      {
+        title: 'Time & Date',
+        copy: 'time_date.html'
+      },
+      {
+        title: 'Accommodations',
+        copy: 'accommodations.html'
+      },
+      {
+        title: 'Registry',
+        copy: 'registry.html'
+      },
+      {
+        title: 'Things to do in Minnesota',
+        copy: 'things_to_do.html'
+      },
+      {
+        title: 'Contact',
+        copy: 'contact.html'
+      }
+    ];
+    reply.view('index', {
+      content: content
+    });
   }
 });
 
