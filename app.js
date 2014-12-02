@@ -6,7 +6,8 @@ server.views({
   engines: {
     html: require('handlebars')
   },
-  path: Path.join(__dirname, 'templates')
+  path: Path.join(__dirname, 'templates'),
+  partialsPath: Path.join(__dirname, 'templates')
 });
 
 
@@ -81,6 +82,7 @@ server.route({
       }
     ];
     reply.view('index', {
+      asdf: 'foo',
       content: content
     });
   }

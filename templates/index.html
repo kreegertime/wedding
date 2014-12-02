@@ -22,15 +22,14 @@
       </div>
     </div>
 
-    <br/>
-
-    <!-- TODO: serve this up dynamically... -->
+    {{#content}}
     <div class="container content-container">
       <div class="row">
         <div class="col-xs-12 col-sm-5 content-title">
-          <h3>RSVP</h3>
+          <h3>{{title}}</h3>
         </div>
         <div class="col-xs-12 col-sm-7 hide-xs content-copy">
+          <!-- TODO: Grab content here... -->
           Some copy here. Some copy here. Some copy here. Some copy here.
           Some copy here. Some copy here. Some copy here. Some copy here.
           Some copy here. Some copy here. Some copy here. Some copy here.
@@ -38,29 +37,7 @@
         </div>
       </div>
     </div>
-
-
-    <!-- TODO(kreeger): Left off right here need to figure out how the best way
-    to properly handle the layout stuff here -->
-    <!-- {{ content }} -->
-
-    <br/>
-    <br/>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <ul>
-            <li>RSVP</li>
-            <li>Time &amp; Date</li>
-            <li>Accommodations</li>
-            <li>Registry</li>
-            <li>Things to do in Minnesota</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    {{/content}}
 
   </body>
 </html>

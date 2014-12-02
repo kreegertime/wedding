@@ -1,11 +1,17 @@
 $(document).ready(function() {
-  var contentContainer = $('.content-container');
-  contentContainer.find('.content-title').click(function() {
-    var copy = contentContainer.find('.content-copy');
-    if (copy.hasClass('hide-xs')) {
-      copy.removeClass('hide-xs');
+
+  // Class name toggle utility method
+  function toggleClass(element, classname) {
+    if (element.classList.contains(classname)) {
+      element.classList.remove(classname);
     } else {
-      copy.addClass('hide-xs');
+      element.classList.add(classname);
     }
+  }
+
+  // Show/hide container.
+  $('.content-container').click(function() {
+    toggleClass(this.querySelector('.content-copy'), 'hide-xs');
   });
+
 });
