@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  
+  // Set equal height
+  $('.content-container').height($('.nav').height());
 
   // Class name toggle utility method
   function toggleClass(element, classname) {
@@ -10,8 +13,26 @@ $(document).ready(function() {
   }
 
   // Show/hide container.
-  $('.content-container').click(function() {
-    toggleClass(this.querySelector('.content-copy'), 'hide-xs');
+  $('.content-nav').click(function() {
+    var action = this.getAttribute('action');
+    if (action == 'form') {
+      // TODO(kreeger): Handle this in the future.
+    } else {
+      $('.content-nav').toggleClass('hidden');
+      $('.content-container').toggleClass('hidden');
+      $('.content-container .content').html('');
+
+      $.get(action, function(result) {
+        console.log('result', result);
+        $('.content-container .content').html(result);
+      });
+    }
+  });
+
+  // Content back button
+  $('.back-button').click(function() {
+    $('.content-nav').toggleClass('hidden');
+    $('.content-container').toggleClass('hidden');
   });
 
 });

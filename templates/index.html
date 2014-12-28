@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-5">
-          <img src="images/photo1.jpg" class="img-responsive" alt="" />
+          <img src="images/photo2.jpg" class="img-responsive" alt="" />
         </div>
         <div class="col-xs-12 col-md-7">
           <div class="page-header">
@@ -23,22 +23,26 @@
       </div>
     </div>
 
-    {{#content}}
-    <div class="container content-container">
-      <div class="row">
-        <div class="col-xs-12 col-md-5 content-title">
-          <h3>{{title}}</h3>
+    <div class="nav">
+      {{#content}}
+      <div class="container content-nav" action="{{action}}">
+        <div class="row">
+          <div class="col-xs-12 col-md-5 content-title">
+            <h3>{{title}}</h3>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-7 hide-xs content-copy">
-          <!-- TODO: Grab content here... -->
-          Some copy here. Some copy here. Some copy here. Some copy here.
-          Some copy here. Some copy here. Some copy here. Some copy here.
-          Some copy here. Some copy here. Some copy here. Some copy here.
-          Some copy here. Some copy here. Some copy here. Some copy here.
+      </div>
+      {{/content}}
+    </div>
+
+    <div class="container content-container hidden">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="back-button">Back</div>
+          <div class="content"></div>
         </div>
       </div>
     </div>
-    {{/content}}
 
   </body>
 </html>

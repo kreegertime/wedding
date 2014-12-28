@@ -56,29 +56,33 @@ server.route({
   path: '/',
   handler: function(request, reply) {
     var content = [
+      // {
+      //   title: 'RSVP',
+      //   action: 'rsvp.html'  // Needs to be a google form.
+      // },
       {
-        title: 'RSVP',
-        copy: 'rsvp.html'
+        title: 'Time, Date, & Location',
+        action: 'time_date'
       },
       {
-        title: 'Time & Date',
-        copy: 'time_date.html'
+        title: 'Wedding Party',
+        action: 'wedding_party.html'
       },
       {
         title: 'Accommodations',
-        copy: 'accommodations.html'
+        action: 'accommodations.html'
       },
       {
         title: 'Registry',
-        copy: 'registry.html'
+        action: 'registry.html'
       },
       {
         title: 'Things to do in Minnesota',
-        copy: 'things_to_do.html'
+        action: 'things_to_do.html'
       },
       {
-        title: 'Contact',
-        copy: 'contact.html'
+        title: 'Contact Information',
+        action: 'contact.html'
       }
     ];
     reply.view('index', {
@@ -87,6 +91,16 @@ server.route({
     });
   }
 });
+
+// Time, Date, & Location
+server.route({
+  method: 'GET',
+  path: '/time_date',
+  handler: function(request, reply) {
+    reply.view('time_date');
+  }
+});
+
 
 server.start(function() {
   console.log('--------------------');

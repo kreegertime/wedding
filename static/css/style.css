@@ -1,7 +1,24 @@
 body {
+  background-image: url('../images/background-sm.jpg');
+  background-size: cover;
+}
+
+h1 small {
+  color: rgba(0,0,0,0.6);
+}
+
+.page-header {
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 0px) {
+  .content-container {
+  }
+
   .content-title {
     cursor: pointer;
     margin: 10px 0;
@@ -17,11 +34,11 @@ body {
 }
 
 @media (min-width: 768px) {
-  .content-container {
+  .content-nav {
     padding-top: 30px;
   }
 
-  .content-container:last {
+  .content-nav:last {
     padding-bottom: 30px;
   }
 
