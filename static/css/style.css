@@ -1,13 +1,32 @@
 body {
   background-size: cover;
+    background-image: url('../images/background-lg-3.jpg');
 }
 
 h1 small {
-  color: rgba(0,0,0,0.6);
+  color: rgba(255,255,255,0.6);
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+.header {
+  background-color: rgba(0,0,0,0.75);
+}
+
+.nav-header {
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  display: inline-block;
+}
+
+.nav-header:hover {
+  background-color: rgba(0,0,0,0.75);
 }
 
 .page-header {
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 .back-button {
@@ -15,28 +34,29 @@ h1 small {
 }
 
 .back-button:hover {
-  color: rgba(0,0,0,0.6);
+  color: rgba(255,255,255,0.6);
 }
 
 .hidden {
   display: none;
 }
 
+.content-container  {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.content-title {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.content-title:hover {
+  /* background-color: rgba(255,255,255, 0.5); */
+}
+
 @media (min-width: 0px) {
   body {
-    background-image: url('../images/background-sm.jpg');
-  }
-
-  .content-container {
-  }
-
-  .content-title {
-    cursor: pointer;
-    margin: 10px 0;
-  }
-
-  .content-title:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-position-x: -285px;
   }
 
   .hide-xs {
@@ -45,6 +65,10 @@ h1 small {
 }
 
 @media (min-width: 768px) {
+  body {
+    background-position-x: 0px;
+  }
+
   .content-nav {
     padding-top: 30px;
   }
@@ -53,22 +77,11 @@ h1 small {
     padding-bottom: 30px;
   }
 
-  .content-title {
-    cursor: default;
-  }
-
-  .content-title:hover {
-    background-color: inherit;
-  }
-
   .hide-xs {
     display: inherit;
   }
 }
 
 @media (min-width: 922px) {
-  body {
-    background-image: url('../images/background-lg.jpg');
-  }
 }
 
