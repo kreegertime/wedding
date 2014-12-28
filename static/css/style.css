@@ -1,5 +1,4 @@
 body {
-  background-image: url('../images/background-sm.jpg');
   background-size: cover;
 }
 
@@ -11,11 +10,23 @@ h1 small {
   border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
+.back-button {
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: rgba(0,0,0,0.6);
+}
+
 .hidden {
   display: none;
 }
 
 @media (min-width: 0px) {
+  body {
+    background-image: url('../images/background-sm.jpg');
+  }
+
   .content-container {
   }
 
@@ -54,3 +65,10 @@ h1 small {
     display: inherit;
   }
 }
+
+@media (min-width: 922px) {
+  body {
+    background-image: url('../images/background-lg.jpg');
+  }
+}
+
