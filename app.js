@@ -18,15 +18,15 @@ var Content = {
     layout: '/layout_navigation',
     path: '/'
   },
-  DateLocation: {
-    title: 'Time, Date, & Location',
-    layout: '/layout_time_date',
-    path: '/location'
-  },
   Accommodations: {
     title: 'Accommodations',
     layout: '/layout_accommodations',
-    path: '/accommondations'
+    path: '/accommodations'
+  },
+  DateLocation: {
+    title: 'Schedule',
+    layout: '/layout_time_date',
+    path: '/schedule'
   },
   WeddingParty: {
     title: 'Wedding Party',
