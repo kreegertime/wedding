@@ -23,15 +23,15 @@ var Content = {
     layout: '/layout_time_date',
     path: '/location'
   },
+  Accommodations: {
+    title: 'Accommodations',
+    layout: '/layout_accommodations',
+    path: '/accommondations'
+  },
   WeddingParty: {
     title: 'Wedding Party',
     layout: '/layout_wedding_party',
     path: '/weddingparty'
-  },
-  Accommodations: {
-    title: 'Accommodations',
-    layout: '/layout_accomodations',
-    path: '/acommondations'
   },
   Registry: {
     title: 'Registry',

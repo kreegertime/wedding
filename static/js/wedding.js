@@ -46,11 +46,10 @@ $(document).ready(function() {
 
   // Header clickable
   $('.header-clickable').click(function() {
-    window.location = '/';
+    window.location = '/';  // TODO(kreeger): Make this not reload.
   });
-
   // Content back button
   $('.back-button').click(function() {
-    window.history.back();
+    window.location = '/';  // TODO(kreeger): Make this not reload.
   });
 });
