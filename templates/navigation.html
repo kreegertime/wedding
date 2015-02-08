@@ -1,0 +1,21 @@
+<div class="nav">
+  {{#content}}
+  <div class="container content-nav" layout="{{layout}}" title="{{title}}" path="{{path}}">
+    <div class="row">
+      <div class="col-xs-12 col-lg-5 content-title">
+        <h3 class="nav-header">{{title}}</h3>
+      </div>
+    </div>
+  </div>
+  {{/content}}
+
+  <script type="text/javascript">
+    // Show/hide container.
+    $('.content-nav').click(function() {
+      var title = this.getAttribute('title');
+      var layout = this.getAttribute('layout');
+      var path = this.getAttribute('path');
+      Wedding.load(title, layout, path);
+    });
+  </script>
+</div>

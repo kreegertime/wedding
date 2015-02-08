@@ -11,6 +11,80 @@ server.views({
 });
 
 
+/** Site content layout */
+var Content = {
+  Root: {
+    title: 'Jamie & Nick\'s Wedding Site',
+    layout: '/layout_navigation',
+    path: '/'
+  },
+  DateLocation: {
+    title: 'Time, Date, & Location',
+    layout: '/layout_time_date',
+    path: '/location'
+  },
+  WeddingParty: {
+    title: 'Wedding Party',
+    layout: '/layout_wedding_party',
+    path: '/weddingparty'
+  },
+  Accommodations: {
+    title: 'Accommodations',
+    layout: '/layout_accomodations',
+    path: '/acommondations'
+  },
+  Registry: {
+    title: 'Registry',
+    layout: '/layout_registry',
+    path: '/registry'
+  },
+  ThingsToDo: {
+    title: 'Things to do in Minnesota',
+    layout: '/layout_times_to_do',
+    path: '/thingstodo'
+  },
+  Contact: {
+    title: 'Contact Information',
+    layout: '/layout_contact_info',
+    path: '/contact'
+  }
+};
+
+
+/** Navigation Content */
+var ContentArray = Object.keys(Content).map(function(k) { return Content[k]; });
+ContentArray.splice(0, 1); // Remove the root nav from the navigation menu.
+
+
+/** Create paths for each content object */
+Object.keys(Content).forEach(function(key) {
+  var content = Content[key];
+
+  // Create a route for the layout.
+  server.route({
+    method: 'GET',
+    path: content.layout,
+    handler: function(request, reply) {
+      if (content.path == '/') {
+        replyObj = { content: ContentArray };
+      } else {
+        replyObj = content;
+      }
+      reply.view(content.layout.replace('/layout_', ''), replyObj);
+    }
+  });
+  // Create another route for the URL path.
+  server.route({
+    method: 'GET',
+    path: content.path,
+    handler: function(request, reply) {
+      reply.view('index', content);
+    }
+  });
+});
+
+
+/** static content */
 server.route({
   method: 'GET',
   path: '/css/{param*}',
@@ -20,7 +94,6 @@ server.route({
     }
   }
 });
-
 server.route({
   method: 'GET',
   path: '/js/{param*}',
@@ -30,7 +103,6 @@ server.route({
     }
   }
 });
-
 server.route({
   method: 'GET',
   path: '/fonts/{param*}',
@@ -40,7 +112,6 @@ server.route({
     }
   }
 });
-
 server.route({
   method: 'GET',
   path: '/images/{param*}',
@@ -51,57 +122,8 @@ server.route({
   }
 });
 
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: function(request, reply) {
-    var content = [
-      // {
-      //   title: 'RSVP',
-      //   action: 'rsvp.html'  // Needs to be a google form.
-      // },
-      {
-        title: 'Time, Date, & Location',
-        action: 'time_date'
-      },
-      {
-        title: 'Wedding Party',
-        action: 'wedding_party.html'
-      },
-      {
-        title: 'Accommodations',
-        action: 'accommodations.html'
-      },
-      {
-        title: 'Registry',
-        action: 'registry.html'
-      },
-      {
-        title: 'Things to do in Minnesota',
-        action: 'things_to_do.html'
-      },
-      {
-        title: 'Contact Information',
-        action: 'contact.html'
-      }
-    ];
-    reply.view('index', {
-      asdf: 'foo',
-      content: content
-    });
-  }
-});
 
-// Time, Date, & Location
-server.route({
-  method: 'GET',
-  path: '/time_date',
-  handler: function(request, reply) {
-    reply.view('time_date');
-  }
-});
-
-
+/** Run the server! */
 server.start(function() {
   console.log('============================');
   console.log('Server running at:', server.info.uri);

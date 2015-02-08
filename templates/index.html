@@ -23,23 +23,15 @@
       </div>
     </div>
 
-    <div class="nav">
-      {{#content}}
-      <div class="container content-nav" action="{{action}}">
-        <div class="row">
-          <div class="col-xs-12 col-lg-5 content-title">
-            <h3 class="nav-header">{{title}}</h3>
-          </div>
-        </div>
-      </div>
-      {{/content}}
-    </div>
+    <script type="text/javascript">
+      Wedding.load('{{title}}', '{{layout}}', '{{path}}');
+    </script>
 
-    <div class="container content-container hidden">
+    <div class="container content-container">
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="back-button">Back</h3>
           <div class="content"></div>
+          <h3 class="back-button hidden">Back</h3>
         </div>
       </div>
     </div>

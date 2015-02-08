@@ -51,8 +51,8 @@ h1, h2, h3 {
   margin: 10px 0;
 }
 
-.content-title:hover {
-  /* background-color: rgba(255,255,255, 0.5); */
+li {
+  background-color: rgba(0,0,0,0.5);
 }
 
 @media (min-width: 0px) {

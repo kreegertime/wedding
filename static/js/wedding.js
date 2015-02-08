@@ -1,38 +1,51 @@
+var Wedding = {};
+
+/**
+ * Handles loading content for the site.
+ */
+Wedding.load = function(title, layout, path) {
+  $('.content-container .content').html('');
+
+  $.get(layout, function(result) {
+    if (path == '/') {
+      $('.back-button').addClass('hidden');
+    } else {
+      $('.back-button').removeClass('hidden');
+    }
+    $('.content-container .content').html(result);
+    window.history.pushState({
+       title: title,
+       layout: layout,
+       path: path
+    }, title, path);
+  });
+};
+
+
+/**
+ * Handles history events and updates the window URL bar accordingly.
+ */
+Wedding.handlePopState = function(event) {
+  if (event.state) {
+    Wedding.load(event.state.title, event.state.layout, event.state.path);
+  } else {
+    window.location.reload();
+  }
+};
+
+
+/**
+ * Document click handling
+ */
 $(document).ready(function() {
+  // Assign window popstate handling
+  window.onpopstate = Wedding.handlePopState;
 
   // Set equal height
   $('.content-container').height($('.nav').height());
 
-  // Class name toggle utility method
-  function toggleClass(element, classname) {
-    if (element.classList.contains(classname)) {
-      element.classList.remove(classname);
-    } else {
-      element.classList.add(classname);
-    }
-  }
-
-  // Show/hide container.
-  $('.content-nav').click(function() {
-    var action = this.getAttribute('action');
-    if (action == 'form') {
-      // TODO(kreeger): Handle this in the future.
-    } else {
-      $('.content-nav').toggleClass('hidden');
-      $('.content-container').toggleClass('hidden');
-      $('.content-container .content').html('');
-
-      $.get(action, function(result) {
-        console.log('result', result);
-        $('.content-container .content').html(result);
-      });
-    }
-  });
-
   // Content back button
   $('.back-button').click(function() {
-    $('.content-nav').toggleClass('hidden');
-    $('.content-container').toggleClass('hidden');
+    window.history.back();
   });
-
 });
