@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   // Set equal height
   $('.content-container').height($('.nav').height());
 
