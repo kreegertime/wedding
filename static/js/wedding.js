@@ -44,6 +44,11 @@ $(document).ready(function() {
   // Set equal height
   $('.content-container').height($('.nav').height());
 
+  // Header clickable
+  $('.header-clickable').click(function() {
+    window.location = '/';
+  });
+
   // Content back button
   $('.back-button').click(function() {
     window.history.back();
