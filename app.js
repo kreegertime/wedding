@@ -18,20 +18,25 @@ var Content = {
     layout: '/layout_navigation',
     path: '/'
   },
-  Accommodations: {
-    title: 'Accommodations',
-    layout: '/layout_accommodations',
-    path: '/accommodations'
+  Story: {
+    title: 'Our Story',
+    layout: '/layout_story',
+    path: '/story'
+  },
+  WeddingParty: {
+    title: 'Wedding Party',
+    layout: '/layout_wedding_party',
+    path: '/weddingparty'
   },
   DateLocation: {
     title: 'Schedule',
     layout: '/layout_time_date',
     path: '/schedule'
   },
-  WeddingParty: {
-    title: 'Wedding Party',
-    layout: '/layout_wedding_party',
-    path: '/weddingparty'
+  Accommodations: {
+    title: 'Accommodations',
+    layout: '/layout_accommodations',
+    path: '/accommodations'
   },
   Registry: {
     title: 'Registry',
