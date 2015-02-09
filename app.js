@@ -48,11 +48,6 @@ var Content = {
     layout: '/layout_registry',
     path: '/registry'
   },
-  ThingsToDo: {
-    title: 'Things to do in Minnesota',
-    layout: '/layout_things_to_do',
-    path: '/thingstodo'
-  },
   OtherInformation: {
     title: 'Other Information',
     layout: '/layout_other_information',
