@@ -14,7 +14,7 @@ server.views({
 /** Site content layout */
 var Content = {
   Root: {
-    title: 'Jamie & Nick\'s Wedding Site',
+    title: '',
     layout: '/layout_navigation',
     path: '/'
   },

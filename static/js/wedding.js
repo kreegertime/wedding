@@ -13,6 +13,7 @@ Wedding.load = function(title, layout, path) {
       $('.back-button').removeClass('hidden');
     }
     $('.content-container .content').html(result);
+
     window.history.pushState({
        title: title,
        layout: layout,
@@ -23,14 +24,20 @@ Wedding.load = function(title, layout, path) {
 
 
 /**
+ * Handles loading the home link.
+ */
+Wedding.loadHome = function() {
+  Wedding.load('', '/layout_navigation', '/');
+};
+
+/**
  * Handles history events and updates the window URL bar accordingly.
  */
 Wedding.handlePopState = function(event) {
   if (event.state) {
     Wedding.load(event.state.title, event.state.layout, event.state.path);
   } else {
-    // TODO Fix this!
-    // window.location.reload();
+    Wedding.loadHome();
   }
 };
 
@@ -47,10 +54,10 @@ $(document).ready(function() {
 
   // Header clickable
   $('.header-clickable').click(function() {
-    window.location = '/';  // TODO(kreeger): Make this not reload.
+    Wedding.loadHome();
   });
   // Content back button
   $('.back-button').click(function() {
-    window.location = '/';  // TODO(kreeger): Make this not reload.
+    Wedding.loadHome();
   });
 });
