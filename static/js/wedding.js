@@ -1,5 +1,6 @@
 var Wedding = {};
 
+
 /**
  * Handles loading content for the site.
  */
@@ -29,6 +30,7 @@ Wedding.load = function(title, layout, path) {
 Wedding.loadHome = function() {
   Wedding.load('', '/layout_navigation', '/');
 };
+
 
 /**
  * Handles history events and updates the window URL bar accordingly.
