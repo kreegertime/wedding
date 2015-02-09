@@ -80,7 +80,7 @@ p {
 
 @media (min-width: 0px) {
   body {
-    background-position-x: -190px;
+    /* background-position-x: -190px; */
   }
 
   .hide-xs {
