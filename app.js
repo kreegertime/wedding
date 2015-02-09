@@ -38,6 +38,11 @@ var Content = {
     layout: '/layout_accommodations',
     path: '/accommodations'
   },
+  RSVP: {
+    title: 'RSVP',
+    layout: '/layout_rsvp',
+    path: '/rsvp'
+  },
   Registry: {
     title: 'Registry',
     layout: '/layout_registry',
@@ -47,6 +52,11 @@ var Content = {
     title: 'Things to do in Minnesota',
     layout: '/layout_things_to_do',
     path: '/thingstodo'
+  },
+  OtherInformation: {
+    title: 'Other Information',
+    layout: '/layout_other_information',
+    path: '/otherinfo'
   },
   Contact: {
     title: 'Contact Information',
