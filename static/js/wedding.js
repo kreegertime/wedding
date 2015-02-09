@@ -29,7 +29,8 @@ Wedding.handlePopState = function(event) {
   if (event.state) {
     Wedding.load(event.state.title, event.state.layout, event.state.path);
   } else {
-    window.location.reload();
+    // TODO Fix this!
+    // window.location.reload();
   }
 };
 
