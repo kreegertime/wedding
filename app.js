@@ -45,7 +45,7 @@ var Content = {
   },
   ThingsToDo: {
     title: 'Things to do in Minnesota',
-    layout: '/layout_times_to_do',
+    layout: '/layout_things_to_do',
     path: '/thingstodo'
   },
   Contact: {
