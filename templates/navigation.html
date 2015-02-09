@@ -1,17 +1,17 @@
 <div class="nav">
-  {{#content}}
-  <div class="container content-nav" layout="{{layout}}" title="{{title}}" path="{{path}}">
+  <div class="container content-nav">
     <div class="row">
-      <div class="col-xs-12 col-lg-5 content-title">
-        <h4 class="nav-header">{{title}}</h4>
-      </div>
+      {{#content}}
+        <div class="col-xs-12 col-lg-5 content-title" layout="{{layout}}" title="{{title}}" path="{{path}}">
+          <h4 class="nav-header">{{title}}</h4>
+        </div>
+      {{/content}}
     </div>
   </div>
-  {{/content}}
 
   <script type="text/javascript">
     // Show/hide container.
-    $('.content-nav').click(function() {
+    $('.content-title').click(function() {
       var title = this.getAttribute('title');
       var layout = this.getAttribute('layout');
       var path = this.getAttribute('path');
