@@ -44,7 +44,7 @@ var Content = {
     path: '/rsvp'
   },
   Registry: {
-    title: 'Registry',
+    title: 'Registries',
     layout: '/layout_registry',
     path: '/registry'
   },
