@@ -78,9 +78,17 @@ p {
   margin-bottom: 10px;
 }
 
+p.thanks {
+  font-size: 105%;
+}
+
 @media (min-width: 0px) {
   body {
     background-position-x: -150px;
+  }
+
+  .content-nav {
+    padding-top: 20px;
   }
 
   .hide-xs {
@@ -91,10 +99,6 @@ p {
 @media (min-width: 768px) {
   body {
     background-position-x: 0px;
-  }
-
-  .content-nav {
-    padding-top: 20px;
   }
 
   .content-nav:last {
