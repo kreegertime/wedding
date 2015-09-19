@@ -82,6 +82,10 @@ p.thanks {
   font-size: 105%;
 }
 
+.italic {
+  font-style: italic;
+}
+
 @media (min-width: 0px) {
   body {
     background-position-x: -150px;
